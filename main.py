@@ -98,9 +98,7 @@ while True:
     # code  
 
  if "search" in prompt:
-
-  while True:
-
+   while True:
   prompt = input("Enter prompt: ")
 
   # Indent here
