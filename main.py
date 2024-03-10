@@ -23,15 +23,12 @@ def generate_image():
   
 # search.py
 
-def search(query):
-  print(f"Searching for: {query}")
+def search():
+  print("Searching")
 
 def main():
-
-  query = "Hello world"  
-
-  search(query)
-
+  search()
+  
 if __name__ == '__main__':
   main()
   
