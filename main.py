@@ -21,7 +21,7 @@ def view_list():
 def generate_image():
   # code
   
-# Web search  
+# search.py 
 
 import sys
 
