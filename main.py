@@ -23,6 +23,7 @@ def generate_image():
   
 # Response function  
 def respond(prompt):
+  ^
   if "add" in prompt:
     # code
     
