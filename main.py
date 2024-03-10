@@ -21,17 +21,6 @@ def view_list():
 def generate_image():
   # code
   
-# search.py
-
-def search():
-  print("Searching")
-
-def main():
-  search()
-  
-if __name__ == '__main__':
-  main()
-  
 # Response function  
 def respond(prompt):
 
