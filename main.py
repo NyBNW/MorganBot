@@ -22,7 +22,6 @@ def generate_image():
   # code
   
 # search.py 
-
 import sys
 
 def search(query):
