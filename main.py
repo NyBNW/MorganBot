@@ -45,22 +45,51 @@ def respond(prompt):
       print("Here is your hat")
     from PIL import Image, ImageDraw
 
-# Create a blank image 
-img = Image.new('RGB', (200, 200), color=(255, 255, 255)) 
+from PIL import Image, ImageDraw
 
-# Get a drawing context
-draw = ImageDraw.Draw(img)
+# Dictionary to store images 
+images = {}
 
-# Draw a rectangle 
-draw.rectangle((50, 50, 150, 150), fill=(0,0,255)) 
+def generate_image():
 
-# Draw some text 
-draw.text((50,50), "Hello World", fill=(0,0,0))
+  img = Image.new('RGB', (200,200))
+  draw = ImageDraw.Draw(img)
 
-# Save the image 
-img.save('image.png')
+  # Draw shape  
+  draw.rectangle((50,50,100,100), fill='blue')
 
-print("Image generated!")
+  # Prompt for tag
+  tag = input("Enter tag: ")  
+
+  # Save image with tag
+  images[tag] = img
+
+def show_images():
+
+  for tag, img in images.items():
+
+    # Render tag 
+    print(f"Image - {tag}")
+
+    # Save image
+    img.save(f"images/{tag}.png")
+
+while True:
+
+  print("1. Generate Image")
+  print("2. View Images")
+  print("3. Exit")
+
+  choice = input("> ")
+
+  if choice == "1":
+    generate_image()
+  
+  elif choice == "2":  
+    show_images()
+
+  elif choice == "3":
+    break
     
   if "view list" in prompt:  
     view_list ()
