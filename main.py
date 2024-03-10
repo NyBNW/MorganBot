@@ -19,15 +19,51 @@ def view_list():
   
 # Image generation   
 def generate_image():
-  # code
+  from PIL import Image, ImageDraw
+
+# Create a blank image 
+img = Image.new('RGB', (200, 200), color=(255, 255, 255)) 
+
+# Get a drawing context
+draw = ImageDraw.Draw(img)
+
+# Draw a rectangle 
+draw.rectangle((50, 50, 150, 150), fill=(0,0,255)) 
+
+# Draw some text 
+draw.text((50,50), "Hello World", fill=(0,0,0))
+
+# Save the image 
+img.save('image.png')
+
+print("Image generated!")
   
 # Response function  
 def respond(prompt):
   if "add" in prompt:
-    # code
+    if "hat"
+      print("Here is your hat")
+    from PIL import Image, ImageDraw
+
+# Create a blank image 
+img = Image.new('RGB', (200, 200), color=(255, 255, 255)) 
+
+# Get a drawing context
+draw = ImageDraw.Draw(img)
+
+# Draw a rectangle 
+draw.rectangle((50, 50, 150, 150), fill=(0,0,255)) 
+
+# Draw some text 
+draw.text((50,50), "Hello World", fill=(0,0,0))
+
+# Save the image 
+img.save('image.png')
+
+print("Image generated!")
     
   if "view list" in prompt:  
-    # code  
+    view_list ()
 
   if "image" in prompt:
     # code  
