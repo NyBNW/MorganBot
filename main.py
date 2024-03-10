@@ -22,8 +22,20 @@ def generate_image():
   # code
   
 # Web search  
+
+import sys
+
 def search(query):
-  pass
+  print(f"Searching for: {query}")
+
+def main():
+
+  query = "Hello world"
+  
+  search(query)
+
+if __name__ == '__main__':
+  main()
   
 # Response function  
 def respond(prompt):
