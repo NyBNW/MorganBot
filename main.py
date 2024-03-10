@@ -21,16 +21,15 @@ def view_list():
 def generate_image():
   # code
   
-# search.py 
-import sys
+# search.py
 
 def search(query):
   print(f"Searching for: {query}")
 
 def main():
 
-  query = "Hello world"
-  
+  query = "Hello world"  
+
   search(query)
 
 if __name__ == '__main__':
