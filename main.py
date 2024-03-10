@@ -99,19 +99,23 @@ while True:
 
  if "search" in prompt:
 
-  # Query Google
-  url = f"https://www.google.com/search?q={prompt}"
-  resp = requests.get(url)
+  while True:
 
-  # Extract first result 
-  soup = BeautifulSoup(resp.text, "html.parser")
-  result = soup.select_one(".tF2Cxc")
+  prompt = input("Enter prompt: ")
 
-  if result:
-    print(f"Top result for {prompt}:")
-    print(result.text)  
+  # Indent here
+  if "search" in prompt:
+
+    # query google code
+
+    if result:
+      print(result)
+    else: 
+      print("No results found")
+
   else:
-    print("No results found")
+
+    print(prompt)  
 
 else:
 
