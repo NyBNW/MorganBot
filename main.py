@@ -23,9 +23,7 @@ def generate_image():
   
 # Web search  
 def search(query):
-  def search(query):
-  print("Testing") 
-  # code
+  pass
   
 # Response function  
 def respond(prompt):
