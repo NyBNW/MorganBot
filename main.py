@@ -97,29 +97,25 @@ while True:
   if "image" in prompt:
     # code  
 
-  if "search" in prompt:
-    import requests
-from bs4 import BeautifulSoup
+ if "search" in prompt:
 
-while True:
+  # Query Google
+  url = f"https://www.google.com/search?q={prompt}"
+  resp = requests.get(url)
 
-  prompt = input("Enter search query or press enter to exit: ")
-  
-  if prompt:
+  # Extract first result 
+  soup = BeautifulSoup(resp.text, "html.parser")
+  result = soup.select_one(".tF2Cxc")
 
-    # Query Google
-    url = f"https://www.google.com/search?q={prompt}"
-    resp = requests.get(url)
+  if result:
+    print(f"Top result for {prompt}:")
+    print(result.text)  
+  else:
+    print("No results found")
 
-    # Extract first result
-    soup = BeautifulSoup(resp.text, "html.parser")
-    result = soup.select_one(".tF2Cxc")
+else:
 
-    if result:
-      print(f"Top result for {prompt}:")
-      print(result.text)
-    else:
-      print("No results found")
+  print(prompt)
 
   else:
     break
