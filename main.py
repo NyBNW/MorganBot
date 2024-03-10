@@ -98,7 +98,31 @@ while True:
     # code  
 
   if "search" in prompt:
-    # code
+    import requests
+from bs4 import BeautifulSoup
+
+while True:
+
+  prompt = input("Enter search query or press enter to exit: ")
+  
+  if prompt:
+
+    # Query Google
+    url = f"https://www.google.com/search?q={prompt}"
+    resp = requests.get(url)
+
+    # Extract first result
+    soup = BeautifulSoup(resp.text, "html.parser")
+    result = soup.select_one(".tF2Cxc")
+
+    if result:
+      print(f"Top result for {prompt}:")
+      print(result.text)
+    else:
+      print("No results found")
+
+  else:
+    break
 
   return "I'm afraid I don't have enough context. How can I help?"
 
