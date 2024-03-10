@@ -41,7 +41,7 @@ print("Image generated!")
 # Response function  
 def respond(prompt):
   if "add" in prompt:
-    if "hat"
+    if "hat"in prompt:
       print("Here is your hat")
     from PIL import Image, ImageDraw
 
